@@ -29,9 +29,16 @@ int main()
         printf("\n   Votre choix ? ");
         choix = getchar();
         viderBuffer(); // supprimer de l'entrée standard le retour charriot et les éventuels caractères supplémentaires tapés par l'utilisateur
-
+        
+        
+        char* nom_magasin = NULL;
+        size_t len = 0;
         switch (choix) {
             case '1' :
+                printf("\n Entrez le nom du magasin: ");
+                getline(&nom_magasin, &len, stdin);
+                T_Magasin *nv_magasin = creerMagasin(nom_magasin);
+                printf("\n Creation reussie du magasin: %s", nv_magasin -> nom);
                 break;
 
             case '2' :

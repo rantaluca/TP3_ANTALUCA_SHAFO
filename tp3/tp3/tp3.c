@@ -65,7 +65,13 @@ T_Magasin *creerMagasin(char *nom) {
 
 /* ********************************
  * Ajout d'un rayon dans un magasin
+ renvoie 1 si l'ajout s'est bien passé,
+ 0 sinon;
+ respectant le tri par ordre alphabétique sur le nom du rayon
+ Ne pas autoriser l'utilisateur à ajouter deux fois le même nom de rayon
  ******************************** */
+
+
 int ajouterRayon(T_Magasin *magasin, char *nomRayon) {
     // TODO
     return 1;
